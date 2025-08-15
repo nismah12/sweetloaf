@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200">
+  <rect width="320" height="200" fill="#FFF7EA"/>
+  <ellipse cx="160" cy="140" rx="110" ry="30" fill="#8B5E3C" opacity=".3"/>
+  <ellipse cx="160" cy="110" rx="80" ry="40" fill="#C08B5A"/>
+  <circle cx="160" cy="95" r="18" fill="#8B5E3C"/>
+  <text x="20" y="32" font-family="Poppins, Arial" font-size="18" fill="#8B5E3C">Cream Donut</text>
+</svg>

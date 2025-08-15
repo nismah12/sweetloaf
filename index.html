@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SweetLoaf — Toko Roti Modern</title>
+  <meta name="description" content="SweetLoaf - roti hangat, bahan premium, rasa autentik. Alamat: JL. Mawar Sari 12, Jakarta." />
+  <link rel="preload" href="assets/svg/logo.svg" as="image" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="brand">
+      <img src="assets/svg/logo.svg" alt="Logo SweetLoaf" width="120" height="30">
+      <div class="brand-text">
+        <div class="store-name">SweetLoaf</div>
+        <small class="tagline">Roti Hangat • Hari Semangat</small>
+      </div>
+    </div>
+    <nav class="links" aria-label="Navigasi utama">
+      <a href="#hero">Beranda</a>
+      <a href="#best">Terlaris</a>
+      <a href="#testi">Testimoni</a>
+      <a href="#contact">Kontak</a>
+      <a href="#checkout">Checkout</a>
+    </nav>
+    <div class="actions">
+      <button id="openCart" class="cart-btn" aria-label="Buka keranjang">🛒 <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <!-- HERO + SLIDER TERLARIS -->
+  <section id="hero" class="hero">
+    <div class="hero-inner">
+      <h1>Selamat datang di <span>SweetLoaf</span></h1>
+      <p>Dipanggang harian, bahan pilihan, dan penuh kehangatan.</p>
+      <a href="#best" class="btn primary">Lihat Roti Terlaris</a>
+    </div>
+  </section>
+
+  <section id="best" class="section best">
+    <div class="section-head">
+      <h2>Produk Terlaris</h2>
+      <p>Top 5 yang paling disukai pelanggan kami.</p>
+    </div>
+    <div class="slider" id="slider" role="region" aria-label="Slider produk terlaris">
+      <button class="control prev" id="prev" aria-label="Sebelumnya">❮</button>
+      <div class="slides" id="slides"></div>
+      <button class="control next" id="next" aria-label="Berikutnya">❯</button>
+      <div class="dots" id="dots" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- CHECKOUT -->
+  <section id="checkout" class="section checkout">
+    <div class="section-head">
+      <h2>Checkout</h2>
+      <p>Periksa pesananmu dan isi data pengiriman.</p>
+    </div>
+    <div class="checkout-wrap">
+      <div class="summary">
+        <h3>Ringkasan Keranjang</h3>
+        <div id="checkoutItems" class="checkout-items"></div>
+        <div class="totals">
+          <div><span>Subtotal</span><span id="subtotal">Rp0</span></div>
+          <div><span>Pajak (10%)</span><span id="tax">Rp0</span></div>
+          <div class="grand"><strong>Total</strong><strong id="grandTotal">Rp0</strong></div>
+        </div>
+        <button id="cartCheckout" class="btn outline full">Checkout</button>
+      </div>
+
+      <form id="checkoutForm" class="checkout-form" novalidate>
+        <h3>Data Pemesan</h3>
+        <label>Nama Lengkap
+          <input name="name" type="text" required placeholder="Nama kamu">
+        </label>
+        <label>Email
+          <input name="email" type="email" required placeholder="email@domain.com">
+        </label>
+        <label>Telepon
+          <input name="phone" type="tel" required placeholder="08xxxxxxxxxx">
+        </label>
+        <label>Alamat Pengiriman
+          <textarea name="address" rows="4" required placeholder="Jalan, Kota, Kode Pos"></textarea>
+        </label>
+        <label>Metode Pembayaran
+          <select name="payment" required>
+            <option value="">Pilih</option>
+            <option value="cod">COD</option>
+            <option value="transfer">Transfer Bank</option>
+            <option value="qris">QRIS</option>
+          </select>
+        </label>
+        <button type="submit" class="btn primary full">Buat Pesanan</button>
+        <p class="muted">Simulasi checkout — tanpa pembayaran online.</p>
+      </form>
+    </div>
+    <div id="toast" class="toast" aria-live="polite"></div>
+  </section>
+
+  <!-- TESTIMONI & INPUT -->
+  <section id="testi" class="section testimonials">
+    <div class="section-head">
+      <h2>Testimoni Pelanggan</h2>
+      <p>Bagikan pengalamanmu dan baca ulasan lainnya.</p>
+    </div>
+    <div id="testiList" class="testi-list"></div>
+
+    <form id="testiForm" class="card form" novalidate>
+      <h3>Tulis Testimoni</h3>
+      <label>Nama
+        <input name="name" type="text" placeholder="Nama kamu" required>
+      </label>
+      <label>Rating
+        <select name="rating" required>
+          <option value="">Pilih rating</option>
+          <option>5</option><option>4</option><option>3</option><option>2</option><option>1</option>
+        </select>
+      </label>
+      <label>Ulasan
+        <textarea name="message" rows="4" placeholder="Tulis ulasanmu..." required></textarea>
+      </label>
+      <button class="btn outline">Kirim Testimoni</button>
+    </form>
+  </section>
+
+  <!-- KRITIK & SARAN -->
+  <section id="contact" class="section contact">
+    <div class="section-head">
+      <h2>Kritik & Saran</h2>
+      <p>Kami senang mendengar masukanmu untuk jadi lebih baik.</p>
+    </div>
+    <form id="feedbackForm" class="card form" novalidate>
+      <label>Nama (opsional)
+        <input name="name" type="text" placeholder="Nama">
+      </label>
+      <label>Pesan
+        <textarea name="message" rows="4" placeholder="Tulis kritik/saran..." required></textarea>
+      </label>
+      <button class="btn primary">Kirim</button>
+      <p class="muted">Alamat toko: <strong>JL. Mawar Sari 12, Jakarta</strong></p>
+    </form>
+  </section>
+
+  <!-- CART DRAWER -->
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Keranjang</h3>
+      <button id="closeCart" class="icon-btn" aria-label="Tutup keranjang">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">Rp0</strong></div>
+      <div class="cart-actions">
+        <a href="#checkout" id="gotoCheckout" class="btn outline">Checkout</a>
+        <button id="clearCart" class="btn ghost">Kosongkan</button>
+      </div>
+    </div>
+  </aside>
+  <div id="overlay" class="overlay" hidden></div>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> SweetLoaf • JL. Mawar Sari 12, Jakarta</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200">
+  <rect width="320" height="200" fill="#FFF7EA"/>
+  <ellipse cx="160" cy="120" rx="120" ry="60" fill="#C08B5A"/>
+  <ellipse cx="110" cy="100" rx="35" ry="22" fill="#8B5E3C" opacity=".45"/>
+  <ellipse cx="160" cy="96" rx="35" ry="22" fill="#8B5E3C" opacity=".45"/>
+  <ellipse cx="210" cy="100" rx="35" ry="22" fill="#8B5E3C" opacity=".45"/>
+  <text x="20" y="32" font-family="Poppins, Arial" font-size="18" fill="#8B5E3C">Signature Loaf</text>
+</svg>

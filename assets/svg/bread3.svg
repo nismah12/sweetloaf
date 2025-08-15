@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200">
+  <rect width="320" height="200" fill="#FFF7EA"/>
+  <path d="M40 130c0-44 80-70 120-70s120 26 120 70-80 28-120 28-120 16-120-28z" fill="#C08B5A"/>
+  <path d="M80 120c10-20 40-20 50 0M160 118c10-20 40-20 50 0" stroke="#8B5E3C" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <text x="20" y="32" font-family="Poppins, Arial" font-size="18" fill="#8B5E3C">Butter Croissant</text>
+</svg>
